@@ -107,11 +107,14 @@
 // -----------------------------------------------------------------------------------------
 // ----------------------home work----------------------------------------------------------
 
-// for (let number = 2; number <= 20; number++) {
-    
-//     if (number % 2 ===0 || number%3===0  ) {
-//         console.log(number);
-//     }else{
-//         console.log(`${number} tub son`);
-//     }
-// }
+for (let number = 2; number <= 20; number++) {
+    let tub =true
+    for(let i=2; i<number; i++)
+        if (number %i ===0) {
+            tub =false;
+        }  
+    if(tub){
+        console.log(`${number} tub son`);
+    }
+
+}
