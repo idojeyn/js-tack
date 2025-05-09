@@ -119,3 +119,44 @@
 //         console.log(number);
 //     }
 // }
+// const order = {
+//     customer: {
+//         name: 'Asal',
+//         contact: {
+//             phone: '',
+//             email: ''
+//         }
+//     },
+//     items: [
+//         { name: 'Laptop', price: 1200 },
+//         { name: 'Mouse', price: 25 }
+//     ],
+//     payment: null,
+//     shipping: {
+//         address: {
+//             city: 'Tashkent',
+//             street: 'Yunusabad 5'
+//         },
+//         delivered: false
+//     }
+
+// }
+// let n = order.customer.name
+// let ph = order.customer.contact.phone
+// let e = order.customer.contact.email
+// let p = order.payment
+// let city =order.shipping.address.city
+// let del =order.shipping.delivered
+
+// console.log(n);
+// console.log(ph ? `Customer phone: ${ph}`:'Phone not available');
+// console.log(e || `No email provided`);
+// console.log(p ?? `Payment pending`);
+
+// const total =order.items.reduce((acc , curr)=> acc.price + curr.price)
+// console.log(`Total: $${total}`);
+
+// console.log( city? `Shipping to: ${city}`: "Delivery address missing");
+// console.log(order.customer.loyaltyCard?.points ?? "No loyalty points");
+// del && console.log(`Order has been delivered`);
+// order.getTrackingCode?.() ?? console.log('')
