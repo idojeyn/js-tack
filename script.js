@@ -160,3 +160,57 @@
 // console.log(order.customer.loyaltyCard?.points ?? "No loyalty points");
 // del && console.log(`Order has been delivered`);
 // order.getTrackingCode?.() ?? console.log('')
+
+// ------------------------------home work--------------------------------------------------------
+
+let a = 5;
+let b = a;
+b = 10;
+
+let arr1 = [1, 2, 3];
+let arr2 = arr1;
+arr2.push(4);
+
+console.log("a:", a);       //  5
+console.log("b:", b);       // 10
+console.log("arr1:", arr1); // [1,2,3,4]
+console.log("arr2:", arr2); // [1,2,3,4]
+
+const obj = {
+  name: "Ali",
+  greet: function () {
+    setTimeout(function () {
+      console.log("Hello,", this.name);
+    }, 1000);
+  }
+};
+
+obj.greet();
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Inside setTimeout");
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("Inside Promise");
+});
+
+console.log("End");
+
+
+// Savollar (O‘zing yozib ko‘r)
+
+// a va b o‘zgaruvchilari orasidagi bog‘liqlik qanday?
+// a va b ning urtasida bog'liqlik yuq chunki ular primitive faqat value nusxa olinadi
+
+// Nega arr1 va arr2 ikkalasi ham [1, 2, 3, 4] bo‘ladi?
+// sabab ular reference(manzil), unda manzil nusxa olinadi
+
+// this.name ni setTimeout ichida undefined bo‘lishining sababi nima?
+// settimeout oddiy funksiyada chaqiryapti,this aftamatichiskiy window obyektga ishora qilad
+
+// console.log("Inside Promise") va console.log("Inside setTimeout") qaysi biri oldin chiqadi?
+// sabab inside setTimeout macrotask ga tushadi, inside promise esa microtask.ga tushadi.
+// microtask bajarilgandan sung ,macrotask.ga utadi
